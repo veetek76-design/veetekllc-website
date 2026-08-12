@@ -56,9 +56,7 @@
             color: var(--text-dark);
         }
 
-        /* ---------------------------------------------------- */
         /* STICKY NAVIGATION */
-        /* ---------------------------------------------------- */
         header {
             position: sticky;
             top: 0;
@@ -140,9 +138,7 @@
             box-shadow: 0 6px 18px rgba(2, 132, 199, 0.4);
         }
 
-        /* ---------------------------------------------------- */
         /* HERO SECTION */
-        /* ---------------------------------------------------- */
         .hero-wrapper {
             background: linear-gradient(180deg, #f1f5f9 0%, #ffffff 100%);
             border-bottom: 1px solid var(--border-light);
@@ -248,9 +244,7 @@
             border: 1px solid var(--border-light);
         }
 
-        /* ---------------------------------------------------- */
         /* STATS METRICS STRIP */
-        /* ---------------------------------------------------- */
         .stats-strip {
             background: #ffffff;
             border-bottom: 1px solid var(--border-light);
@@ -281,9 +275,7 @@
             letter-spacing: 0.5px;
         }
 
-        /* ---------------------------------------------------- */
         /* FEATURES SECTION */
-        /* ---------------------------------------------------- */
         .section-container {
             max-width: 1250px;
             margin: 90px auto;
@@ -357,9 +349,7 @@
             line-height: 1.6;
         }
 
-        /* ---------------------------------------------------- */
         /* LEADERSHIP / FOUNDER SECTION */
-        /* ---------------------------------------------------- */
         .leadership-wrapper {
             background: var(--bg-secondary);
             border-y: 1px solid var(--border-light);
@@ -440,9 +430,7 @@
             color: var(--primary-blue);
         }
 
-        /* ---------------------------------------------------- */
         /* CONTACT / DEMO FORM */
-        /* ---------------------------------------------------- */
         .contact-section {
             background: #ffffff;
             border: 1px solid var(--border-light);
@@ -491,9 +479,7 @@
             box-shadow: 0 0 0 3px rgba(2, 132, 199, 0.15);
         }
 
-        /* ---------------------------------------------------- */
         /* FOOTER */
-        /* ---------------------------------------------------- */
         footer {
             border-top: 1px solid var(--border-light);
             padding: 40px 6%;
@@ -690,30 +676,36 @@
                 </div>
             </div>
 
-            <!-- DEMO REQUEST FORM -->
+            <!-- DEMO REQUEST FORM WITH DIRECT EMAIL NOTIFICATION VIA FORMSUBMIT -->
             <div class="contact-section" id="contact">
                 <div style="text-align: center; margin-bottom: 30px;">
                     <h3 style="font-size: 1.9rem; margin-bottom: 8px; color: var(--primary-navy);">Schedule a Custom Clinic Demo</h3>
                     <p style="color: var(--text-muted);">See how VeeTek AI can integrate into your practice's EHR workflow in under 24 hours.</p>
                 </div>
 
-                <form id="demoForm" onsubmit="handleFormSubmit(event)">
+                <!-- Action routes directly to FormSubmit service emailing jai.verma@veetekllc.com -->
+                <form id="demoForm" action="https://formsubmit.co/jai.verma@veetekllc.com" method="POST">
+                    <!-- FormSubmit Configuration -->
+                    <input type="hidden" name="_subject" value="🚀 New Clinic Demo Request — VeeTek LLC Website">
+                    <input type="hidden" name="_template" value="table">
+                    <input type="hidden" name="_captcha" value="false">
+
                     <div class="form-grid">
                         <div class="form-group">
                             <label>Your Full Name *</label>
-                            <input type="text" placeholder="Dr. Sarah Jenkins" required>
+                            <input type="text" name="Full_Name" placeholder="Dr. Sarah Jenkins" required>
                         </div>
                         <div class="form-group">
                             <label>Work Email Address *</label>
-                            <input type="email" placeholder="s.jenkins@orthoclinic.com" required>
+                            <input type="email" name="Work_Email" placeholder="s.jenkins@orthoclinic.com" required>
                         </div>
                         <div class="form-group">
                             <label>Medical Practice / Health System *</label>
-                            <input type="text" placeholder="Advanced Orthopedics & Spine" required>
+                            <input type="text" name="Medical_Practice" placeholder="Advanced Orthopedics & Spine" required>
                         </div>
                         <div class="form-group">
                             <label>Primary EHR System</label>
-                            <select>
+                            <select name="EHR_System">
                                 <option>Epic Systems</option>
                                 <option>athenaHealth</option>
                                 <option>eClinicalWorks</option>
@@ -723,7 +715,7 @@
                         </div>
                         <div class="form-group full-width">
                             <label>Message / Practice Priorities</label>
-                            <textarea rows="4" placeholder="Tell us about your practice specialty, monthly prior-auth volume, or current denial challenges..."></textarea>
+                            <textarea name="Message" rows="4" placeholder="Tell us about your practice specialty, monthly prior-auth volume, or current denial challenges..."></textarea>
                         </div>
                     </div>
 
@@ -731,7 +723,6 @@
                         <button type="submit" class="btn-cta" style="padding: 14px 40px; font-size: 1.05rem;"><i class="fa-solid fa-paper-plane"></i> Submit Request to Founder</button>
                     </div>
                 </form>
-                <div id="formStatus" style="display: none; text-align: center; margin-top: 20px; color: var(--success-green); font-weight: 700;"></div>
             </div>
         </section>
     </div>
@@ -748,15 +739,5 @@
             </div>
         </div>
     </footer>
-
-    <script>
-        function handleFormSubmit(event) {
-            event.preventDefault();
-            const statusDiv = document.getElementById("formStatus");
-            statusDiv.style.display = "block";
-            statusDiv.innerHTML = "<i class='fa-solid fa-circle-check'></i> Thank you! Your request has been transmitted directly to Jai Verma (Founder & CEO). We will respond within 2 business hours.";
-            document.getElementById("demoForm").reset();
-        }
-    </script>
 </body>
 </html>
