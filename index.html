@@ -56,7 +56,9 @@
             color: var(--text-dark);
         }
 
+        /* ---------------------------------------------------- */
         /* STICKY NAVIGATION */
+        /* ---------------------------------------------------- */
         header {
             position: sticky;
             top: 0;
@@ -80,9 +82,8 @@
         }
 
         .brand-logo img {
-            height: 44px;
+            height: 42px;
             width: auto;
-            border-radius: 4px;
             object-fit: contain;
         }
 
@@ -138,7 +139,9 @@
             box-shadow: 0 6px 18px rgba(2, 132, 199, 0.4);
         }
 
+        /* ---------------------------------------------------- */
         /* HERO SECTION */
+        /* ---------------------------------------------------- */
         .hero-wrapper {
             background: linear-gradient(180deg, #f1f5f9 0%, #ffffff 100%);
             border-bottom: 1px solid var(--border-light);
@@ -244,7 +247,9 @@
             border: 1px solid var(--border-light);
         }
 
+        /* ---------------------------------------------------- */
         /* STATS METRICS STRIP */
+        /* ---------------------------------------------------- */
         .stats-strip {
             background: #ffffff;
             border-bottom: 1px solid var(--border-light);
@@ -275,7 +280,9 @@
             letter-spacing: 0.5px;
         }
 
+        /* ---------------------------------------------------- */
         /* FEATURES SECTION */
+        /* ---------------------------------------------------- */
         .section-container {
             max-width: 1250px;
             margin: 90px auto;
@@ -349,7 +356,9 @@
             line-height: 1.6;
         }
 
+        /* ---------------------------------------------------- */
         /* LEADERSHIP / FOUNDER SECTION */
+        /* ---------------------------------------------------- */
         .leadership-wrapper {
             background: var(--bg-secondary);
             border-y: 1px solid var(--border-light);
@@ -370,67 +379,74 @@
             margin: 0 auto;
         }
 
-        .founder-img-box {
-            width: 100%;
-            border-radius: 12px;
-            overflow: hidden;
-            border: 1px solid var(--border-light);
-            box-shadow: var(--shadow-sm);
+        /* Executive Business Card (HTML/CSS component with official logo) */
+        .exec-card-container {
+            background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+            border: 2px solid #e2e8f0;
+            border-top: 4px solid var(--primary-blue);
+            border-radius: 14px;
+            padding: 36px 30px;
+            box-shadow: var(--shadow-md);
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
         }
 
-        .founder-img-box img {
-            width: 100%;
-            height: auto;
-            display: block;
-        }
-
-        .founder-details h3 {
-            font-size: 2.2rem;
-            color: var(--primary-navy);
-            margin-bottom: 4px;
-        }
-
-        .founder-role {
-            color: var(--primary-blue);
-            font-size: 1.12rem;
-            font-weight: 700;
+        .exec-card-logo {
+            height: 110px;
+            width: auto;
+            object-fit: contain;
             margin-bottom: 20px;
         }
 
-        .founder-contact-list {
-            margin-top: 28px;
+        .exec-name {
+            font-size: 2rem;
+            font-weight: 800;
+            color: var(--primary-navy);
+            margin-bottom: 4px;
+            letter-spacing: -0.5px;
+        }
+
+        .exec-title {
+            font-size: 1.08rem;
+            font-weight: 700;
+            color: var(--primary-blue);
+            font-style: italic;
+            margin-bottom: 18px;
+        }
+
+        .exec-divider {
+            width: 80px;
+            height: 3px;
+            background: linear-gradient(90deg, var(--primary-blue), var(--primary-cyan));
+            margin: 0 auto 20px auto;
+            border-radius: 2px;
+        }
+
+        .exec-contacts {
             display: flex;
             flex-direction: column;
-            gap: 14px;
-        }
-
-        .contact-item {
-            display: flex;
-            align-items: center;
-            gap: 14px;
-            font-size: 1.02rem;
+            gap: 10px;
+            font-size: 0.95rem;
             color: var(--text-body);
-            font-weight: 500;
+            font-weight: 600;
         }
 
-        .contact-item i {
-            color: var(--primary-blue);
-            width: 22px;
-            font-size: 1.1rem;
-        }
-
-        .contact-item a {
+        .exec-contacts a {
             color: var(--primary-navy);
             text-decoration: none;
-            font-weight: 600;
             transition: color 0.2s ease;
         }
 
-        .contact-item a:hover {
+        .exec-contacts a:hover {
             color: var(--primary-blue);
         }
 
+        /* ---------------------------------------------------- */
         /* CONTACT / DEMO FORM */
+        /* ---------------------------------------------------- */
         .contact-section {
             background: #ffffff;
             border: 1px solid var(--border-light);
@@ -479,7 +495,9 @@
             box-shadow: 0 0 0 3px rgba(2, 132, 199, 0.15);
         }
 
+        /* ---------------------------------------------------- */
         /* FOOTER */
+        /* ---------------------------------------------------- */
         footer {
             border-top: 1px solid var(--border-light);
             padding: 40px 6%;
@@ -524,7 +542,7 @@
     <!-- STICKY HEADER NAV -->
     <header>
         <a href="#" class="brand-logo">
-            <img src="assets/veetek_logo_standard.jpg" alt="VeeTek LLC Logo" onerror="this.src='assets/veetek_logo.png'">
+            <img src="assets/veetek_emblem.png" alt="VeeTek LLC Emblem" onerror="this.src='assets/veetek_logo.png'">
             <div class="brand-title">VeeTek <span>LLC</span></div>
         </a>
         <nav>
@@ -671,21 +689,27 @@
                     </div>
                 </div>
 
-                <div class="founder-img-box">
-                    <img src="assets/jai_verma_header.png" alt="Jai Verma — Founder & CEO VeeTek LLC">
+                <!-- EXECUTIVE BUSINESS CARD COMPONENT WITH OFFICIAL LOGO -->
+                <div class="exec-card-container">
+                    <img src="assets/veetek_logo_transparent.png" alt="VeeTek LLC Official Logo" class="exec-card-logo" onerror="this.src='assets/veetek_logo.png'">
+                    <h4 class="exec-name">Jai Verma</h4>
+                    <div class="exec-title">Founder & CEO | VeeTek LLC</div>
+                    <div class="exec-divider"></div>
+                    <div class="exec-contacts">
+                        <span><i class="fa-solid fa-envelope" style="color: var(--primary-blue);"></i> <a href="mailto:jai.verma@veetekllc.com">jai.verma@veetekllc.com</a></span>
+                        <span><i class="fa-solid fa-globe" style="color: var(--primary-blue);"></i> <a href="http://www.veetekllc.com" target="_blank">www.veetekllc.com</a></span>
+                    </div>
                 </div>
             </div>
 
-            <!-- DEMO REQUEST FORM WITH DIRECT EMAIL NOTIFICATION VIA FORMSUBMIT -->
+            <!-- DEMO REQUEST FORM -->
             <div class="contact-section" id="contact">
                 <div style="text-align: center; margin-bottom: 30px;">
                     <h3 style="font-size: 1.9rem; margin-bottom: 8px; color: var(--primary-navy);">Schedule a Custom Clinic Demo</h3>
                     <p style="color: var(--text-muted);">See how VeeTek AI can integrate into your practice's EHR workflow in under 24 hours.</p>
                 </div>
 
-                <!-- Action routes directly to FormSubmit service emailing jai.verma@veetekllc.com -->
                 <form id="demoForm" action="https://formsubmit.co/jai.verma@veetekllc.com" method="POST">
-                    <!-- FormSubmit Configuration -->
                     <input type="hidden" name="_subject" value="🚀 New Clinic Demo Request — VeeTek LLC Website">
                     <input type="hidden" name="_template" value="table">
                     <input type="hidden" name="_captcha" value="false">
@@ -731,7 +755,7 @@
     <footer>
         <div class="footer-grid">
             <div class="brand-logo">
-                <img src="assets/veetek_logo_standard.jpg" alt="VeeTek LLC Logo" style="height: 36px;" onerror="this.src='assets/veetek_logo.png'">
+                <img src="assets/veetek_emblem.png" alt="VeeTek LLC Logo" style="height: 32px;" onerror="this.src='assets/veetek_logo.png'">
                 <div class="brand-title" style="font-size: 1.2rem; color: #ffffff;">VeeTek <span style="color: var(--primary-cyan);">LLC</span></div>
             </div>
             <div class="footer-copy">
