@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VeeTek LLC — Autonomous AI Prior Authorization & Healthcare Compliance</title>
-    <meta name="description" content="VeeTek LLC provides zero-hallucination AI prior-authorization auditing, HL7 FHIR R4 EHR interoperability, physician peer-to-peer appeal exports, and WORM immutable audit ledgers.">
-    <meta name="keywords" content="VeeTek LLC, Prior Authorization AI, Healthcare Compliance, HL7 FHIR R4, Epic Systems, athenaHealth, Texas HB 3459, Peer-to-Peer Appeals">
+    <meta name="description" content="VeeTek LLC provides zero-hallucination AI prior-authorization auditing, HL7 FHIR R4 EHR interoperability, physician peer-to-peer appeal exports, and WORM immutable audit ledgers. Led by 20+ year Healthcare IT Architecture Leadership.">
+    <meta name="keywords" content="VeeTek LLC, Jai Verma, Prior Authorization AI, Healthcare Compliance, HL7 FHIR R4, Epic Systems, athenaHealth, UnitedHealth Group, Ascension, Texas HB 3459, Peer-to-Peer Appeals">
     
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -357,7 +357,7 @@
         }
 
         /* ---------------------------------------------------- */
-        /* LEADERSHIP / FOUNDER SECTION */
+        /* LEADERSHIP / FOUNDER SECTION & CREDENTIALS */
         /* ---------------------------------------------------- */
         .leadership-wrapper {
             background: var(--bg-secondary);
@@ -371,7 +371,7 @@
             border-radius: 18px;
             padding: 46px;
             display: grid;
-            grid-template-columns: 1.2fr 1fr;
+            grid-template-columns: 1.25fr 0.95fr;
             gap: 46px;
             align-items: center;
             box-shadow: var(--shadow-md);
@@ -379,7 +379,21 @@
             margin: 0 auto;
         }
 
-        /* Executive Business Card (HTML/CSS component with official logo) */
+        .authority-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: #f0fdf4;
+            border: 1px solid #bbf7d0;
+            color: var(--success-green);
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            margin-bottom: 16px;
+        }
+
+        /* Executive Business Card Component */
         .exec-card-container {
             background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
             border: 2px solid #e2e8f0;
@@ -395,14 +409,14 @@
         }
 
         .exec-card-logo {
-            height: 110px;
+            height: 100px;
             width: auto;
             object-fit: contain;
-            margin-bottom: 20px;
+            margin-bottom: 18px;
         }
 
         .exec-name {
-            font-size: 2rem;
+            font-size: 2.1rem;
             font-weight: 800;
             color: var(--primary-navy);
             margin-bottom: 4px;
@@ -413,8 +427,7 @@
             font-size: 1.08rem;
             font-weight: 700;
             color: var(--primary-blue);
-            font-style: italic;
-            margin-bottom: 18px;
+            margin-bottom: 16px;
         }
 
         .exec-divider {
@@ -442,6 +455,40 @@
 
         .exec-contacts a:hover {
             color: var(--primary-blue);
+        }
+
+        /* Credentials Badges Strip */
+        .credentials-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+            margin-top: 24px;
+        }
+
+        .cred-box {
+            background: #f8fafc;
+            border: 1px solid var(--border-light);
+            border-radius: 10px;
+            padding: 14px 16px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .cred-icon {
+            font-size: 1.3rem;
+            color: var(--primary-blue);
+        }
+
+        .cred-text strong {
+            display: block;
+            font-size: 0.92rem;
+            color: var(--primary-navy);
+        }
+
+        .cred-text span {
+            font-size: 0.78rem;
+            color: var(--text-muted);
         }
 
         /* ---------------------------------------------------- */
@@ -525,6 +572,7 @@
             .hero-section { grid-template-columns: 1fr; }
             .features-grid { grid-template-columns: 1fr 1fr; }
             .leadership-card { grid-template-columns: 1fr; }
+            .credentials-grid { grid-template-columns: 1fr; }
             .stats-grid { grid-template-columns: 1fr 1fr; }
         }
 
@@ -665,17 +713,45 @@
     <div class="leadership-wrapper" id="leadership">
         <section class="section-container" style="margin: 0 auto;">
             <div class="section-header">
-                <span class="section-tag">Executive Leadership</span>
-                <h2 class="section-title">Built for Clinical Excellence & Operational Scale</h2>
+                <span class="section-tag">Executive Leadership & Domain Authority</span>
+                <h2 class="section-title">Led by 20+ Year Healthcare IT & Architecture Leadership</h2>
             </div>
 
             <div class="leadership-card">
                 <div>
+                    <div class="authority-badge">
+                        <i class="fa-solid fa-award"></i> Dual Payer & Provider Architectural Leadership
+                    </div>
                     <h3>Jai Verma</h3>
                     <div class="founder-role">Founder & CEO | VeeTek LLC</div>
                     <p style="color: var(--text-body); font-size: 1.02rem; line-height: 1.7; margin-bottom: 24px;">
-                        VeeTek LLC bridges the gap between healthcare providers and payer policies through deterministic, zero-hallucination AI automation. We empower medical practices to reduce administrative burn-out, accelerate prior authorizations, and secure rapid claim approvals.
+                        Jai Verma brings over two decades of enterprise technology leadership across the nation's largest healthcare and payer organizations. Having served as <strong>Director of Enterprise Architecture at UnitedHealth Group</strong> (#1 US Health Insurer) and <strong>Director of Enterprise Architecture at Ascension</strong> (Clinical Imaging & Population Health), Jai built VeeTek LLC to eliminate the friction between clinical documentation and insurer policy mandates through zero-hallucination AI automation.
                     </p>
+
+                    <!-- CREDENTIAL BADGES STRIP -->
+                    <div class="credentials-grid">
+                        <div class="cred-box">
+                            <div class="cred-icon"><i class="fa-solid fa-hospital"></i></div>
+                            <div class="cred-text">
+                                <strong>Ascension</strong>
+                                <span>Director, EA</span>
+                            </div>
+                        </div>
+                        <div class="cred-box">
+                            <div class="cred-icon"><i class="fa-solid fa-shield-heart"></i></div>
+                            <div class="cred-text">
+                                <strong>UnitedHealth Group</strong>
+                                <span>Director, EA</span>
+                            </div>
+                        </div>
+                        <div class="cred-box">
+                            <div class="cred-icon"><i class="fa-solid fa-user-graduate"></i></div>
+                            <div class="cred-text">
+                                <strong>MBA in IT & BE</strong>
+                                <span>UW-Milwaukee</span>
+                            </div>
+                        </div>
+                    </div>
 
                     <div class="founder-contact-list">
                         <div class="contact-item">
@@ -694,6 +770,7 @@
                     <img src="assets/veetek_logo_transparent.png" alt="VeeTek LLC Official Logo" class="exec-card-logo" onerror="this.src='assets/veetek_logo.png'">
                     <h4 class="exec-name">Jai Verma</h4>
                     <div class="exec-title">Founder & CEO | VeeTek LLC</div>
+                    <div style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 12px; font-weight: 600;">Former EA Leadership: UnitedHealth Group & Ascension</div>
                     <div class="exec-divider"></div>
                     <div class="exec-contacts">
                         <span><i class="fa-solid fa-envelope" style="color: var(--primary-blue);"></i> <a href="mailto:jai.verma@veetekllc.com">jai.verma@veetekllc.com</a></span>
