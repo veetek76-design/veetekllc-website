@@ -357,6 +357,63 @@
         }
 
         /* ---------------------------------------------------- */
+        /* DEPLOYMENT & EHR INTEGRATION SECTION */
+        /* ---------------------------------------------------- */
+        .deployment-wrapper {
+            background: #ffffff;
+            border-top: 1px solid var(--border-light);
+            padding: 80px 6%;
+        }
+
+        .deployment-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 28px;
+            max-width: 1200px;
+            margin: 40px auto 0 auto;
+        }
+
+        .deployment-card {
+            background: #f8fafc;
+            border: 1px solid var(--border-light);
+            border-top: 4px solid var(--primary-blue);
+            border-radius: 14px;
+            padding: 32px;
+            transition: all 0.3s ease;
+        }
+
+        .deployment-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-md);
+            border-top-color: var(--primary-cyan);
+        }
+
+        .deployment-card .card-icon {
+            width: 48px;
+            height: 48px;
+            background: #e0f2fe;
+            color: var(--primary-blue);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.3rem;
+            margin-bottom: 18px;
+        }
+
+        .deployment-card h3 {
+            font-size: 1.25rem;
+            color: var(--primary-navy);
+            margin-bottom: 10px;
+        }
+
+        .deployment-card p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        /* ---------------------------------------------------- */
         /* LEADERSHIP / FOUNDER SECTION & CREDENTIALS */
         /* ---------------------------------------------------- */
         .leadership-wrapper {
@@ -708,6 +765,33 @@
             </div>
         </div>
     </section>
+
+    <!-- FLEXIBLE DEPLOYMENT: EHR & PORTAL -->
+    <div class="deployment-wrapper" id="deployment">
+        <section class="section-container" style="margin: 0 auto; padding: 0;">
+            <div class="section-header">
+                <span class="section-tag">Enterprise Integration & Deployment</span>
+                <h2 class="section-title">Direct EHR Integration & Web Command Portal</h2>
+                <p style="color: var(--text-muted); max-width: 780px; margin: 12px auto 0 auto; font-size: 1.02rem;">
+                    VeeTek offers complete deployment flexibility. Connect directly to your existing EHR system via real-time webhooks or access our web portal with zero clinical friction.
+                </p>
+            </div>
+
+            <div class="deployment-grid">
+                <div class="deployment-card">
+                    <div class="card-icon"><i class="fa-solid fa-network-wired"></i></div>
+                    <h3>Direct EHR Webhook Integration</h3>
+                    <p>Connects directly to your EHR system (Epic, Cerner, athenaHealth) via real-time background webhooks, automatically auditing clinical chart notes in your native workflow.</p>
+                </div>
+
+                <div class="deployment-card">
+                    <div class="card-icon"><i class="fa-solid fa-desktop"></i></div>
+                    <h3>Web Command Center Portal</h3>
+                    <p>Instant browser-based access for clinicians and practice managers to paste clinical chart notes, run real-time risk scores, and download compliant authorization packages.</p>
+                </div>
+            </div>
+        </section>
+    </div>
 
     <!-- LEADERSHIP & EXECUTIVE CONTACT -->
     <div class="leadership-wrapper" id="leadership">
